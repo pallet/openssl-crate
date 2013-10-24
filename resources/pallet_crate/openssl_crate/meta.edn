@@ -1,0 +1,10 @@
+{:header "openssl"
+ :title
+ "A [pallet](http://palletops.com/) crate to install and configure openssl."
+ :git-repo "https://github.com/pallet/openssl-crate"
+ :api-docs "http://palletops.com/openssl-crate/0.8/api"
+ :annotated-docs "http://palletops.com/openssl-crate/0.8/annotated/uberdoc.html"
+ :tag-prefix ""
+ :artifact-id "openssl-crate"
+ :source-path "src/pallet/crate/openssl.clj"
+ :versions [{:pallet "0.8.0-RC.3" :version "0.8.0-SNAPSHOT"}]}
