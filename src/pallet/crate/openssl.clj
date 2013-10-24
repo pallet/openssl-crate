@@ -95,7 +95,7 @@
 
 (defn format-csr-config
   [m]
-  (str "RANDFILE               = $ENV::HOME/.rnd
+  (str "RANDFILE               = \\$ENV::HOME/.rnd
 
  [req]
  distinguished_name     = req_distinguished_name
@@ -108,7 +108,7 @@
                      (fn [k]
                        (when-let [v (k m)]
                          (str (upper-case (name k)) " = "
-                              (if (or (#{:cn :o :ou} k)
+                              (if (or (#{:cn} k)
                                       (.contains v " "))
                                 (str \" v \")
                                 v))))
@@ -123,8 +123,10 @@
   (remote-file
    "csr-config"
    :content (format-csr-config
-             (merge default-dn (dissoc options :passin :passout)))
-   :literal true)
+             (merge default-dn
+                    {:cn "$(hostname -A | sed 's/ //g')"}
+                    (dissoc options :passin :passout)))
+   :literal false)
   (exec-checked-script
    "Create Private Key"
    ("openssl" req
