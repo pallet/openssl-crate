@@ -10,7 +10,7 @@
 (deftest invoke-test
   (is (build-actions {}
         (openssl/settings {})
-        (openssl/install))))
+        (openssl/install {}))))
 
 (def test-spec
   (server-spec
