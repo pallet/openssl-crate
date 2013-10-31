@@ -4,13 +4,12 @@
    [clojure.java.io :refer [file]]
    [clojure.string :as string :refer [upper-case]]
    [clojure.tools.logging :refer [debugf]]
-   [pallet.action :refer [with-action-options]]
    [pallet.actions :refer [exec-checked-script remote-file]]
    [pallet.api :as api :refer [plan-fn]]
    [pallet.crate :refer [assoc-settings defmethod-plan defplan get-settings]]
    [pallet.crate-install :as crate-install]
    [pallet.script.lib :refer [cp make-temp-file mv rm]]
-   [pallet.utils :refer [apply-map deep-merge maybe-assoc]]
+   [pallet.utils :refer [apply-map deep-merge]]
    [pallet.version-dispatch
     :refer [defmethod-version-plan defmulti-version-plan]]
    [pallet.versions :refer [version-string as-version-vector]]))
