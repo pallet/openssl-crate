@@ -22,7 +22,7 @@ The `install` function is responsible for actually installing openssl.
 
 ## Live test on vmfest
 
-For example, to run the live test on VMFest, using Ubuntu 12.04:
+For example, to run the live test on VMFest, using Ubuntu 13:
 
 ```sh
 lein with-profile +vmfest pallet up --selectors ubuntu-13
