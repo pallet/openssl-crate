@@ -1,4 +1,4 @@
-(defproject com.palletops/openssl-crate "0.8.0-alpha.1"
+(defproject com.palletops/openssl-crate "0.8.0-SNAPSHOT"
   :description "Crate for openssl installation and usage"
   :url "http://github.com/pallet/openssl-crate"
   :license {:name "Eclipse Public License"
